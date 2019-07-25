@@ -20,4 +20,7 @@ class PostsRemoteDataSource {
 
     fun postDelete(id: Long) =
             api.deletePosts(id)
+
+    fun editPost(id: Long, title: String) =
+            api.editPost(id, title)
 }

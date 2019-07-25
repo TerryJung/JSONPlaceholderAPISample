@@ -52,6 +52,10 @@ object PostsDataRepository : PostsDataSource {
                         }
             } ?: Flowable.just(false)!!
 
+
+    override fun editPost(id: Long, title: String) {
+       remoteDataSource.editPost(id, title)
+    }
     override fun release() {
         postMap.clear()
         isLast = false

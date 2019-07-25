@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">JsonPlaceHolderExample</string>
-    <string name="not_found_content">Not found content.</string>
+    <string name="app_name">JsonPlaceHolderSample</string>
+
     <string name="label_no">No</string>
     <string name="label_yes">Yes</string>
     <string name="label_comment">Comment %,d</string>
 
     <string name="label_post_delete">Post delete</string>
-    <string name="message_item_remove">Are you sure you want to delete \"%s\" the following?</string>
+    <string name="message_item_remove">%s 게시글을 삭제하시겠습니까?</string>
 </resources>

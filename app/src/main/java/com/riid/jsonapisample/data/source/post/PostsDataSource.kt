@@ -33,6 +33,7 @@ interface PostsDataSource {
      */
     fun postDelete(id: Long): Flowable<Boolean>
 
+    fun editPost(id: Long, title: String)
     /**
      * All data release
      */

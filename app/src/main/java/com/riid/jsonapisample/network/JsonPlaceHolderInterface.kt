@@ -1,12 +1,9 @@
 package com.riid.jsonapisample.network
 
 import io.reactivex.Flowable
-import retrofit2.http.DELETE
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
 import com.riid.jsonapisample.data.Comment
 import com.riid.jsonapisample.data.Post
+import retrofit2.http.*
 
 interface JsonPlaceHolderInterface {
 
@@ -22,4 +19,11 @@ interface JsonPlaceHolderInterface {
 
     @DELETE("/posts/{id}")
     fun deletePosts(@Path("id") id: Long): Flowable<Any>
+
+    @FormUrlEncoded
+    @Headers("Content-Type: application/json; charset=utf-8")
+    @PATCH("/posts/{id}")
+    fun editPost(
+            @Path("id") id: Long,
+            @Field("title") title: String) : Flowable<Any>
 }
