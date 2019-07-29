@@ -5,9 +5,9 @@ import com.cob.riid.jsonapisample.util.createRetrofit
 
 object RetrofitFactory {
 
-    private const val APIURL = "https://jsonplaceholder.typicode.com"
+    private const val API_URL = "https://jsonplaceholder.typicode.com"
 
     val api: JsonPlaceHolderInterface by lazy {
-        createRetrofit(JsonPlaceHolderInterface::class.java, APIURL)
+        createRetrofit(JsonPlaceHolderInterface::class.java, API_URL)
     }
 }
