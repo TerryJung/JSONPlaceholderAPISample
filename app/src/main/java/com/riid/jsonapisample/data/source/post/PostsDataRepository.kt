@@ -25,11 +25,11 @@ object PostsDataRepository : PostsDataSource {
                 Flowable.empty()
             } else {
                 remoteDataSource.getPosts(start, limit)
-                        .map {
+                        .map {it ->
                             it.also { isLast = it.size < limit }
                         }
                         .concatMapIterable { it }
-                        .map {
+                        .map {it ->
                             it.also { postMap[it.id] = it }
                         }
                         .toList()
